@@ -1,0 +1,103 @@
+/* Variables de diseño */
+:root {
+    --primary: #4a90e2;
+    --secondary: #f39c12;
+    --bg: #f4f7f6;
+    --text: #2c3e50;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedores principales */
+#home-screen, #quiz-container {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 { color: var(--primary); }
+
+/* Grid de botones del Home */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilo general de botones */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Opciones de respuesta */
+#options {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#options button {
+    background: #ecf0f1;
+    color: var(--text);
+    border: 1px solid #bdc3c7;
+}
+
+#options button:hover {
+    background: #dfe6e9;
+}
+
+/* Estados de respuesta (Añade estas clases desde JS) */
+.correct { background-color: #2ecc71 !important; color: white !important; }
+.wrong { background-color: #e74c3c !important; color: white !important; }
+
+/* Stats y elementos extra */
+#stats {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+#btn-audio, #btn-show-hint {
+    background: #34495e;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#btn-next {
+    background: var(--secondary);
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+#hint-text {
+    background: #fff3cd;
+    padding: 10px;
+    border-left: 5px solid #ffc107;
+    font-style: italic;
+}
